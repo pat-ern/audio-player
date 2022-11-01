@@ -24,3 +24,15 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+//
+
+// import google font
+@import url('https://fonts.googleapis.com/css?family=Oxygen+Mono');
+
+// set all app font to Oxygen Mono
+* {
+  font-family: 'Oxygen Mono', monospace;
+}
+

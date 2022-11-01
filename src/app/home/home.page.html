@@ -1,20 +1,57 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Audio Player
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list lines="none"> 
+    <ion-item *ngFor="let track of playlist" (click)="start(track)">
+      <div [style.color]=" track == activeTrack ? 'white' : 'gray' ">
+        {{track.name}}
+      </div>
+    </ion-item>
+  </ion-list>
 </ion-content>
+
+<footer *ngIf="activeTrack">
+  <ion-toolbar>
+    <ion-row class="ion-margin">
+
+      <ion-col size="12" class="ion-text-center">
+        <div color="medium">{{ activeTrack.name }}</div>
+      </ion-col>
+
+      <ion-col size="12" class="ion-text-center">
+        <ion-text color="medium">{{ strProgress }} - {{ totalLength }}</ion-text>
+      </ion-col>
+
+      <ion-col size="12" class="ion-text-center">
+        <ion-range #range max="100" color="dark" [(ngModel)]="progress" (mouseup)="seek()" (touchend)="seek()"></ion-range>
+      </ion-col>
+
+      <ion-col size="12" class="ion-text-center">
+
+        <ion-button fill="clear" (click)="prev()" color="medium">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
+  
+        <ion-button fill="clear" (click)="togglePlayer(false)" *ngIf="!isPlaying" color="medium">
+          <ion-icon name="play-outline"></ion-icon>
+        </ion-button>
+  
+        <ion-button fill="clear" (click)="togglePlayer(true)" *ngIf="isPlaying" color="medium">
+          <ion-icon name="pause-outline"></ion-icon>
+        </ion-button>
+  
+        <ion-button fill="clear" (click)="next()" color="medium">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+
+      </ion-col>
+
+    </ion-row>
+  </ion-toolbar>
+</footer>
