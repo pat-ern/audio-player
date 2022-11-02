@@ -17,20 +17,68 @@ export class HomePage {
 
   playlist: Track[] = [
     {
-      name: 'Kl',
-      path: 'assets/mp3/grandma-fybh-ep-01-kl.mp3'
+      name: 'Opening',
+      path: 'assets/mp3/01 Opening.mp3'
     },
     {
-      name: 'Poke',
-      path: 'assets/mp3/grandma-fybh-ep-02-poke.mp3'
+      name: 'The Walk Home',
+      path: 'assets/mp3/02 The Walk Home.mp3'
     },
     {
-      name: 'Are we dead yet?',
-      path: 'assets/mp3/grandma-fybh-ep-03-are-we-dead-yet.mp3'
+      name: 'The Closet',
+      path: 'assets/mp3/03 The Closet.mp3'
     },
     {
-      name: 'Comics Battle',
-      path: 'assets/mp3/grandma-fybh-ep-04-comics-battle.mp3'
+      name: 'Nick & Sam',
+      path: 'assets/mp3/04 Nick & Sam.mp3'
+    },
+    {
+      name: 'The Roof',
+      path: 'assets/mp3/05 The Roof.mp3'
+    },
+    {
+      name: 'The Pool',
+      path: 'assets/mp3/06 The Pool.mp3'
+    },
+    {
+      name: 'Shopping',
+      path: 'assets/mp3/07 Shopping.mp3'
+    },
+    {
+      name: 'The Cabin',
+      path: 'assets/mp3/08 The Cabin.mp3'
+    },
+    {
+      name: 'Nick & Sam pt. II',
+      path: 'assets/mp3/09 Nick & Sam pt. II.mp3'
+    },
+    {
+      name: 'The Pool pt. II',
+      path: 'assets/mp3/10 The Pool pt. II.mp3'
+    },
+    {
+      name: 'Nick & The Nightingale',
+      path: 'assets/mp3/11 Nick & The Nightingale.mp3'
+    },
+    {
+      name: 'The Drawers',
+      path: 'assets/mp3/12 The Drawers.mp3'
+    },
+    {
+      name: 'The Dream',
+      path: 'assets/mp3/13 The Dream.mp3'
+    },
+    {
+      name: 'Nick & The Nightingale pt. II',
+      path: 'assets/mp3/14 Nick & The Nightingale pt. II.mp3'
+    },
+    {
+      name: 'Closing',
+      path: 'assets/mp3/15 Closing.mp3'
+    },
+    {
+      name: 'Credits',
+      path: 'assets/mp3/16 Credits.mp3'
     },
   ];
 
